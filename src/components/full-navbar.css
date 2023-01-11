@@ -110,7 +110,7 @@ nav li a span:before {
   -webkit-background-clip: text;
   z-index: 1;
   height: 0%;
-  /* overflow: hidden; */
+  overflow: hidden;
   transition: 400ms linear 0s;
 }
 

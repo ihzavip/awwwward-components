@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
-import "./full-navbar.css";
+import "./sidebar.css";
 import { gsap } from "gsap";
-
-const FullNavbar = () => {
+const Sidebar = () => {
   // store the timeline in a ref.
   const tl = useRef();
   const [reversed, setReversed] = useState(true);
@@ -16,17 +15,8 @@ const FullNavbar = () => {
         .to(
           ".fullpage-menu",
           {
-            duration: 0,
-            display: "block",
-            ease: "Expo.easeInOut",
-          },
-          "<"
-        )
-        .to(
-          ".menu-bg",
-          {
             duration: 1,
-            opacity: 1,
+            x: 0,
             ease: "Expo.easeInOut",
           },
           "<"
@@ -35,8 +25,8 @@ const FullNavbar = () => {
           ".main-menu li a",
           {
             duration: 1.5,
-            y: "100%",
-            rotateY: 30,
+            x: "-300%",
+            // rotateY: 200,
             stagger: 0.2,
             ease: "Expo.easeOut",
           },
@@ -52,39 +42,45 @@ const FullNavbar = () => {
   }, [reversed]);
 
   return (
-    <div>
-      <h2>FullNavbar</h2>
-      <header>
-        <div className="header-row">
+    <>
+      <header className="relative w-20 h-screen border-r-[1px]">
+        <div className="flex items-center justify-center bg-black flex-col h-full w-full">
           <button
-            className="menu-toggle"
-            id="menuToggle"
             onClick={() => {
               setReversed(!reversed);
             }}
+            type="button"
+            className="absolute flex items-center left-0 justify-center p-2 w-full top-0 border-b-[1px]"
           >
             <svg
-              viewBox="0 0 12 10"
-              className="hamburger"
-              height="40px"
-              width="40px"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="white"
+              className="w-12 h-12"
             >
-              <path d="M10,2 L2,2" className="bar-1"></path>
-              <path d="M2,5 L10,5" className="bar-2"></path>
-              <path d="M10,8 L2,8" className="bar-3"></path>
+              <path
+                fillRule="evenodd"
+                d="M2 6.75A.75.75 0 012.75 6h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 6.75zm0 6.5a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
+                clipRule="evenodd"
+              />
             </svg>
           </button>
+
+          <h2 className="vertical-text text-white">
+            kontol cemana ini cara buatnya
+          </h2>
         </div>
       </header>
 
-      <section className="fullpage-menu">
-        <div className="fullpage-menu-inner">
-          <div className="menu-bg"></div>
-          <nav>
-            <ul className="main-menu">
+      <section className="fullpage-menu absolute block -translate-x-[400%] left-0 bg-red-900 top-0 w-full h-screen ">
+        <div className="flex items-center justify-center h-full px-24 py-14">
+          <nav className="relative z-1 text-center">
+            <ul className="main-menu w-screen">
               <li>
                 <a href=" ">
-                  <span data-clip="Home">Home</span>
+                  <span className="link-letters" data-clip="Home">
+                    Home
+                  </span>
                 </a>
               </li>
               <li>
@@ -106,10 +102,8 @@ const FullNavbar = () => {
           </nav>
         </div>
       </section>
-
-      {/* <section className="cover-img"></section> */}
-    </div>
+    </>
   );
 };
 
-export default FullNavbar;
+export default Sidebar;
