@@ -72,7 +72,7 @@ const Sidebar = () => {
         </div>
       </header>
 
-      <section className="fullpage-menu absolute block -translate-x-[400%] left-0 bg-red-900 top-0 w-full h-screen ">
+      <section className="fullpage-menu absolute block -translate-x-[400%] left-0 bg-red-900 top-0 w-screen h-screen ">
         <div className="flex items-center justify-center h-full px-24 py-14">
           <nav className="relative z-1 text-center">
             <ul className="main-menu w-screen">
