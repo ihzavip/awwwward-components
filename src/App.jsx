@@ -6,6 +6,9 @@ import FaqSection from "./components/FaqSection";
 
 import Swiper from "./components/Swiper";
 import Footer from "./components/Footer";
+import SelectingElements from "./components/SelectingElements";
+import Navbar from "./components/Navbar";
+import SliderAwardWinning from "./SliderAwardWinning";
 
 function App() {
   return (
@@ -15,8 +18,11 @@ function App() {
       {/* <Sidebar /> */}
       {/* <HoverImageReveal /> */}
       {/* <Swiper /> */}
-      {/* <FaqSection /> */}
-      <Footer />
+      <FaqSection />
+      {/* <Footer /> */}
+      {/* <SelectingElements /> */}
+      {/* <Navbar /> */}
+      {/* <SliderAwardWinning/> */}
     </>
   );
 }
