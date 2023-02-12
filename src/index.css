@@ -1,13 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600&display=swap");
+@font-face {
+  font-family: saol;
+  src: url(/SaolDisplay-Regular.ttf);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  height: 100vh;
-  background: linear-gradient(
-    90deg,
-    hsla(240, 2%, 25%, 1) 0%,
-    hsla(60, 22%, 30%, 1) 100%
-  );
-  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  color: #adadad;
+  background-color: #0c0c0c;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 3px;
+  transform-style: preserve-3d;
 }

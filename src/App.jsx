@@ -1,12 +1,10 @@
-import Basic from "./components/Basic";
-import FullNavbar from "./components/FullNavbar";
-import Sidebar from "./components/Sidebar";
+
+import SandBox from "./components/SandBox";
 function App() {
   return (
     <>
-      {/* <Basic/> */}
-      {/* <FullNavbar /> */}
-      <Sidebar />
+    <SandBox/>
+
     </>
   );
 }
